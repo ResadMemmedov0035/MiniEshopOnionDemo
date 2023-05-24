@@ -1,0 +1,31 @@
+﻿@model MiniEshop.Application.DomainServices.ProductService.Requests.ProductUpsertRequest
+
+@{
+    ViewData["Title"] = "Update Product";
+}
+
+<div asp-validation-summary="ModelOnly"></div>
+
+<form asp-action="Edit" asp-controller="Products" method="post">
+    <table>
+        <tr>
+            <td><label asp-for="Name"></label></td>
+            <td><input asp-for="Name" /></td>
+            <td><span asp-validation-for="Name"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Quantity"></label></td>
+            <td><input asp-for="Quantity" /></td>
+            <td><span asp-validation-for="Quantity"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Price"></label></td>
+            <td><input asp-for="Price" step=".1" type="number" /></td>
+            <td><span asp-validation-for="Price"></span></td>
+        </tr>
+    </table>
+    <br />
+    <button type="submit">Update</button>
+</form>
+
+<partial name="_ValidationScriptsPartial" />

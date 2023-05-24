@@ -1,0 +1,13 @@
+﻿@using MiniEshop.Domain.Exceptions.NotFound
+@model NotFoundException
+
+@{
+    ViewData["Title"] = "Not Found";
+}
+
+<h1>
+    Not Found
+</h1>
+<h2>
+    @Model?.Message
+</h2>
